@@ -1,3 +1,6 @@
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 /* You can add global styles to this file, and also import other style files */
 
 html, body {
@@ -7,4 +10,32 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --bg-color: #f1f1f1;
+  --text-primary: #101213;
+  --text-secondary: #4F575E;
+}
+
+body, .mat-drawer-container {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary) !important;
+}
+
+::ng-deep {
+  button.btn-block {
+    width: 100%;
+  }
+
+  button.btn-primary.btn-block {
+    background-color: var(--bs-teal) !important;
+    border-color: var(--bs-teal);
+
+    &:hover {
+      background-color: #0c9f74 !important;
+    }
+  }
 }

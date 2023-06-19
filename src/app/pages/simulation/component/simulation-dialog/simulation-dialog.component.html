@@ -1,0 +1,45 @@
+<h2 mat-dialog-title class="title">Confirmação de emprestimo</h2>
+
+<mat-dialog-content class="mat-typography">
+    <div class="row mx-2">
+        <div class="col-12 mb-3">
+            <div class="row mb-1 py-2 text-center" style="background-color: #20c99726;">
+                <div class="col-12 col-md-6 offset-md-1">
+                    Valor das parcelas
+                </div>
+                <div class="col-12 col-md-4">
+                    {{data.installment | currency:'BRL' }}
+                </div>
+            </div>
+            <div class="row mb-1 py-2 text-center">
+                <div class="col-12 col-md-6 offset-md-1">
+                    Qtd Parcelas
+                </div>
+                <div class="col-12 col-md-4 ">
+                    {{data.qtdIntallment}}
+
+                </div>
+            </div>
+            <div class="row mb-1 py-2 text-center" style="background-color: #20c99726;">
+                <div class="col-12 col-md-6 offset-md-1">
+                    Total com juros
+                </div>
+                <div class="col-12 col-md-4 ">
+                    {{data.totalLoan | currency:'BRL' }}
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions class="d-block">
+    <div class="row ">
+        <div class="col-12 col-md-4" mat-dialog-close>
+            <button type="button" class="btn btn-outline-secondary btn-block">cancelar</button>
+        </div>
+        <div class="col-12 col-md-8">
+            <button type="button" class="btn btn-primary btn-block" [mat-dialog-close]="true" cdkFocusInitial> Concluir</button>
+        </div>
+    </div>
+
+</mat-dialog-actions>

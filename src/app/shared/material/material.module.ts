@@ -48,9 +48,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: [
     A11yModule,
     CdkStepperModule,
@@ -97,6 +95,6 @@ import { CommonModule } from '@angular/common';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-  ]
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}

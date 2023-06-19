@@ -1,0 +1,21 @@
+:hover {
+  .mat-input-element {
+    caret-color: var(--bs-teal);
+  }
+}
+
+::ng-deep {
+  mat-form-field.mat-focused {
+    .mat-form-field-label {
+      color: var(--bs-teal) !important;
+    }
+
+    .mat-form-field-outline.mat-form-field-outline-thick {
+      color: var(--bs-teal) !important;
+    }
+  }
+
+  .mat-form-field-underline, .mat-form-field-ripple {
+    background-color: var(--bs-teal) !important;
+  }
+}

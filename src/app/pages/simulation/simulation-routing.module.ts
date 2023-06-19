@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: '',
     component: SimulationComponent,
+    data: { title: 'simulacao'} 
   },
 ];
 

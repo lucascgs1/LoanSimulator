@@ -1,0 +1,20 @@
+::ng-deep {
+  a.btn-block {
+    width: 100%;
+  }
+
+  a.btn-primary.btn-block {
+    background-color: var(--bs-teal) !important;
+    border-color: var(--bs-teal);
+
+    &:hover {
+      background-color: #0c9f74 !important;
+    }
+  }
+
+  snack-bar-container.mat-snack-bar-container {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-color: #badbcc;
+  }
+}

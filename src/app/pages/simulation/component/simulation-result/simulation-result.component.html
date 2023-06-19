@@ -1,0 +1,42 @@
+<div class="row mx-2">
+  <div class="col-10 offset-1 mt-3 mb-4">
+    <mat-divider></mat-divider>
+  </div>
+  <div class="col-12 mb-3">
+    <div class="row mb-1 py-2 text-center" style="background-color: #20c99726">
+      <div class="col-12 col-md-6 offset-md-1">Valor das parcelas</div>
+      <div class="col-12 col-md-4">
+        {{ simulation.installment | currency : "BRL" }}
+      </div>
+    </div>
+    <div class="row mb-1 py-2 text-center">
+      <div class="col-12 col-md-6 offset-md-1">Qtd Parcelas</div>
+      <div class="col-12 col-md-4">
+        {{ simulation.qtdIntallment }}
+      </div>
+    </div>
+    <div class="row mb-1 py-2 text-center" style="background-color: #20c99726">
+      <div class="col-12 col-md-6 offset-md-1">Total com juros</div>
+      <div class="col-12 col-md-4">
+        {{ simulation.totalLoan | currency : "BRL" }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-4" (click)="resetForm()">
+    <button type="button" class="btn btn-outline-secondary btn-block">
+      Recomeçar
+    </button>
+  </div>
+  <div class="col-12 col-md-8">
+    <button
+      type="submit"
+      class="btn btn-primary btn-block"
+      (click)="confirmLoan()"
+    >
+      Confirmar
+    </button>
+  </div>
+</div>

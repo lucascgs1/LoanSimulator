@@ -1,4 +1,9 @@
-<p>simulation works!</p>
-<app-form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-10  offset-md-1 col-lg-4 offset-lg-1 p-4 mt-2 box-simulation">
+            <app-simulation-form (loanRequest)="simulateLoan($event)" [simulated]="simulation"></app-simulation-form>
 
-</app-form>
+            <app-simulation-result (cleanForm)="onCleanForm($event)" [simulation]="simulation" *ngIf="simulation"></app-simulation-result>
+        </div>
+    </div>
+</div>

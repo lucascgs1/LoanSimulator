@@ -1,0 +1,35 @@
+<form [formGroup]="requestForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <h3 class="col-12 mb-3 text-bold">
+            Simulação de emprestimo
+        </h3>
+
+        <mat-form-field class="col-12 mb-1" appearance="outline">
+            <mat-label>Nome do solicitante</mat-label>
+            <input matInput placeholder="Ash Ketchun" type="text" formControlName="name">
+            <mat-error *ngIf="!requestForm.pristine && requestForm.controls['name'].errors != null && requestForm.controls['name'].errors.required">
+                O campo é obrigatório
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-12 col-md-6 mb-1" appearance="outline">
+            <mat-label>Valor desejado</mat-label>
+            <input matInput currencyMask formControlName="requestValue" placeholder="R$ 10.000,00" type="text"  maxlength="18" />
+            <mat-error *ngIf="requestForm.controls['requestValue'].errors != null && requestForm.controls['requestValue'].errors.required">
+                O campo é obrigatório
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-12 col-md-6 mb-1" appearance="outline">
+            <mat-label>Número de parcelas</mat-label>
+            <input matInput placeholder="2" type="number" formControlName="installment" minValue="0" maxlength="10">
+            <mat-error *ngIf="requestForm.controls['installment'].errors != null && requestForm.controls['installment'].errors.required">
+                O campo é obrigatório
+            </mat-error>
+        </mat-form-field>
+
+        <div class="col-12" *ngIf="!simulated">
+            <button type="submit" class="col-12 mb-1 btn btn-success btn-block">Simular Emprestimo</button>
+        </div>
+    </div>
+</form>

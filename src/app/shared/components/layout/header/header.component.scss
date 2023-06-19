@@ -1,0 +1,11 @@
+:host {
+  mat-toolbar.header {
+    background-color: var(--bs-teal);
+    color: var(--bs-light);
+
+    .page-title {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
