@@ -4,7 +4,6 @@ import { LoanRequest } from '../../../../core/model/loan/loan-request';
 // package
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
 
 @Component({
